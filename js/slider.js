@@ -1,8 +1,6 @@
-$('.header__slider').slick({
-    rows: 2,
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    dots: true,
-    arrows: false,
-  });
+$('.slider').slick({
+  dots: true,
+  slidesPerRow: 2,
+  rows: 2,
+  arrows: false,
+});
