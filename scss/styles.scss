@@ -93,6 +93,10 @@ body {
     background: url(..//img/geometria/headermain.png) center no-repeat;
     background-size: cover;
 }
+.header-container {
+    position: relative;
+    z-index: 1000;
+}
 // ===  / Header =========================================
 
 // ===  Slider ===========================================
@@ -228,7 +232,7 @@ body {
     color: #f8de01; 
 }
 
-@media (min-width: 1046px) {
+@media (min-width: 1047px) {
     .header-services__item:nth-child(2n+1) {
         margin-bottom: 40px; 
     }
@@ -236,7 +240,7 @@ body {
         margin-bottom: 0;
     }
 }
-@media (max-width: 1045px) {
+@media (max-width: 1046px) {
     .header-services__item {
         margin: 0 auto 40px auto;
     }
@@ -257,3 +261,92 @@ body {
     } 
 }
 // === / Services ==========================================
+
+// === Section products ====================================
+.section-products {
+    background: url(../img/geometria/8.png) center no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -185px;
+    z-index: 900;
+    &-description {
+        padding-top: 380px;
+        text-align: center;
+        &__title {
+            @include font-museo;
+            font-size: 43px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &__text {
+            @include font-museo;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    }
+    &-content {
+        padding-top: 100px;
+        padding-bottom: 310px;
+        &__item {
+            position: relative;
+            img {
+                max-width: 100%;
+            }
+            &__cost {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                padding: 0 13px 0 13px;
+                justify-content: space-between;
+                &__clothes {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                &__price {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1047px) {
+    .section-products {
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            &__item {
+                &__cost {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .section-products {
+        top: -256px;
+    }
+}
+@media (max-width: 1046px) {
+    .section-products {
+        &-content {
+            &__item {
+                position: relative;
+                text-align: center;
+                margin-bottom: 30px;
+                &__cost {
+                    right: 0;
+                    width: 100%;
+                    max-width: 348px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+// === / Section products ==================================
